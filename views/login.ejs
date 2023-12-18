@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/form.css">
+</head>
+
+<body>
+    <nav>
+        <img src="/img/sneakers.png" alt="">
+    </nav>
+    <div class="container">
+        <form action="/login" method="post">
+            <h1>Login</h1>
+            <input type="text" name="emailOrTel" id="emailOrTel" placeholder="Enter your email" required>
+            <input type="password" name="password" id="password" placeholder="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <% if(errorMessage) { %>
+            <p class="error-message" style="color: red;"><%= errorMessage %></p>
+        <% } %>
+        <p>don't have an account ? <a href="signup">Signup</a></p>
+        
+    </div>
+</body>
+</html>
